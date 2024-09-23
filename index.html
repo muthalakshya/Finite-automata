@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finite Automaton Simulation with jsPlumb</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/js/jsplumb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="FiniteStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Non Deterministic Finite Automaton Simulation to accept language consist a substring 0101 over the Input set {0,1} </h1>
+        <div id="automaton">
+            <div class="state" id="state0">q0</div>
+            <div class="state" id="state1">q1</div>
+            <div class="state" id="state2">q2</div>
+            <div class="state" id="state3">q3</div>
+            <div class="state" id="state4">q4</div>
+            <!-- <div id="movingDiv" class="moving-div"></div> -->
+        </div>
+        <input type="text" id="inputString" placeholder="Enter a string">
+        <button onclick="simulate()">Simulate</button>
+        <p id="result"></p>
+        <h1>The current String : <span class="dis">""</span>    </h1>
+        <h1 class="box sub0-0">0,1</h1>
+        <h1 class="box sub0-1">0</h1>
+        <h1 class="box sub1-2">1</h1>
+        <h1 class="box sub2-3">0</h1>
+        <h1 class="box sub3-4">1</h1>
+        <h1 class="box sub4-4">0,1</h1>
+    </div>
+</body>
+<script src="FiniteScript.js"></script>
+</html>

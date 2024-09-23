@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff0000;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+}
+body{
+    overflow: hidden;
+}
+.container {
+    max-width: 1450px;
+    height: 660px;
+    margin: 1.25% auto;
+    padding: 1%;
+    position: relative;
+}
+
+#automaton {
+    position: relative;
+    height: 58%;
+    margin: 1% ;
+}
+
+.state {
+    width: 8%;
+    height: 28%;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+.state.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#state0 { top: 35%; left: 4%; }
+#state1 { top: 35%; left: 22%; }
+#state2 { top: 35%; left: 45%; }
+#state3 { top: 35%; left: 66%; }
+#state4 { top: 35%; left: 88%; }
+
+.jsplumb-connection {
+    transition: stroke 0.3s, stroke-width 0.3s;
+}
+
+.connection-active .jsplumb-connector {
+    stroke: #007bff !important;
+    stroke-width: 4px !important;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2
+}
+/* Highlighted line style */
+.connection-active .jsplumb-connector {
+    stroke: #ff4500 !important;  /* Change to a bright color */
+    stroke-width: 4px !important;  /* Increase the stroke width */
+}
+
+/* Animated hover effect */
+@keyframes hoverEffect {
+    0% { stroke-width: 4px; }
+    50% { stroke-width: 8px; }
+    100% { stroke-width: 4px; }
+}
+
+.connection-hovering .jsplumb-connector {
+    stroke: #00ff00 !important;  /* Color of the line when hovering */
+    stroke-width: 4px !important;
+    animation: hoverEffect 0.5s infinite;  /* Animation for hovering effect */
+    background-color: #00ff00 !important;
+}
+.connection-hovering  {
+    stroke: #00ff00 !important;  /* Color of the line when hovering */
+    stroke-width: 4px !important;
+    animation: hoverEffect 0.5s infinite;  /* Animation for hovering effect */
+    background-color: #00ff00 !important;
+    border-radius: 5%;
+}
+.moving-div {
+    width: 50px;
+    height: 50px;
+    background-color: lightcoral;
+    position: absolute;
+    top: 75%; /* Starting position */
+    left: 6%; /* Starting position */
+    transition: width 0s; /* Smooth transition */
+    z-index: 1000;
+}
+.sub0-0{
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    color: #000000;
+}
+.sub0-1{
+    position: absolute;
+    top: 35%;
+    left: 18%;
+    color: #000000;
+}
+.sub1-2{
+    position: absolute;
+    top: 35%;
+    left: 36%;
+    color: #000000;
+}
+.sub2-3{
+    position: absolute;
+    top: 35%;
+    left: 57%;
+    color: #000000;
+}
+.sub3-4{
+    position: absolute;
+    top: 35%;
+    left: 76%;
+    color: #000000;
+}
+.sub4-4{
+    position: absolute;
+    top: 18%;
+    left: 87%;
+    color: #000000;
+}
+.colorON{
+    color: #00ff00;
+}
+.colorOFF{
+    color: #000000;
+}
